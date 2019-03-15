@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -62,7 +61,7 @@ System.out.println("MemberAddServlet의 doPost를 탄다");
 			
 			pstmt.executeUpdate();
 			
-			res.sendRedirect("./list");
+			res.sendRedirect("./mylist");
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

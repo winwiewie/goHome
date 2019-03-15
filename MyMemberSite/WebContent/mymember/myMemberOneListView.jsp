@@ -21,10 +21,7 @@
 	
 		<!-- scriptlet 스크립틀릿  -->
 	<% 		
-		ArrayList<MyMemberDto> myMemberList = 
-			(ArrayList<MyMemberDto>)request.getAttribute("myMemberList");
-	
-		for(MyMemberDto myMemberDto : myMemberList){
+		MyMemberDto myMemberDto = (MyMemberDto)request.getAttribute("myMemberDto");
 	%>
 	
 	<%=myMemberDto.getNo()%>,
@@ -36,9 +33,7 @@
 	<a href='./delete?no=<%=myMemberDto.getNo()%>'>[삭제]</a>
 	<br>
 	
-	<%
-		}
-	%>
+	
 	
 	<jsp:include page = "/Tail.jsp"/>
 
